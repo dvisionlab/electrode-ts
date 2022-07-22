@@ -1,6 +1,9 @@
-# Handsontable sandbox
+# Electrode
 
-## Setup
+This library aims to read, parse and visualize DICOM files described in the A.34 section of [part3](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/ps3.3.html) of the standard. 
+At the moment it has been tested only on 12-Lead Electrocardiogram IOD (section A.34.3).
+
+## Dev Setup
 
 Download [Node.js](https://nodejs.org/en/download/).
 Run this followed commands:
