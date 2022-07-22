@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "es2015",
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node",
+    // handsontable
+    // "rootDir": "src",
+    "esModuleInterop": true
+    // "module": "commonjs",
+  }
+}
