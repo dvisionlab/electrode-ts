@@ -7,7 +7,8 @@ module.exports = {
   entry: path.resolve(__dirname, "../src/app.ts"),
   output: {
     hashFunction: "xxhash64",
-    filename: "bundle.[contenthash].js",
+    // filename: "bundle.[contenthash].js",
+    filename: "electrode.js",
     path: path.resolve(__dirname, "../dist")
   },
   devtool: "source-map", // or inline-source-map ?
@@ -59,12 +60,16 @@ module.exports = {
           filename: "assets/fonts/[hash][ext]"
         }
       },
-
       // typescript support
       {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/
+      },
+      // for plotly.js
+      {
+        test: /\.js$/,
+        loader: "ify-loader"
       }
     ]
   },
