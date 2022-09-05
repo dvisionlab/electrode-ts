@@ -1,5 +1,5 @@
-import { readFile, createInstanceObjects, renderInstance } from "./index";
-import { MultiplexGroup } from "./types";
+import { readFile, createInstanceObjects, renderInstance } from "../dist/";
+import { MultiplexGroup } from "../src/types";
 
 // const filePath = "test_ecg.dcm";
 const filePath = "prova.dcm";

@@ -4,24 +4,24 @@ const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: path.resolve(__dirname, "../src/app.ts"),
-  output: {
-    hashFunction: "xxhash64",
-    // filename: "bundle.[contenthash].js",
-    filename: "electrode.js",
-    path: path.resolve(__dirname, "../dist")
-  },
+  // entry: path.resolve(__dirname, "../src/app.ts"),
+  // output: {
+  //   hashFunction: "xxhash64",
+  //   // filename: "bundle.[contenthash].js",
+  //   filename: "electrode.js",
+  //   path: path.resolve(__dirname, "../dist")
+  // },
   devtool: "source-map", // or inline-source-map ?
-  plugins: [
-    new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, "../static") }]
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "../src/index.html"),
-      minify: true
-    }),
-    new MiniCSSExtractPlugin()
-  ],
+  // plugins: [
+  //   new CopyWebpackPlugin({
+  //     patterns: [{ from: path.resolve(__dirname, "../static") }]
+  //   }),
+  //   new HtmlWebpackPlugin({
+  //     template: path.resolve(__dirname, "../src/index.html"),
+  //     minify: true
+  //   }),
+  //   new MiniCSSExtractPlugin()
+  // ],
   module: {
     rules: [
       // HTML

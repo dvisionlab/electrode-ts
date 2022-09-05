@@ -9,9 +9,26 @@ const infoColor = _message => {
 };
 
 module.exports = merge(commonConfiguration, {
+  entry: path.resolve(__dirname, "../src/app.ts"),
+  output: {
+    hashFunction: "xxhash64",
+    // filename: "bundle.[contenthash].js",
+    filename: "electrode.js",
+    path: path.resolve(__dirname, "../dist")
+  },
   devtool: "inline-source-map",
   stats: "errors-warnings",
   mode: "development",
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [{ from: path.resolve(__dirname, "../static") }]
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "../src/index.html"),
+      minify: true
+    }),
+    new MiniCSSExtractPlugin()
+  ],
   infrastructureLogging: {
     level: "warn"
   },

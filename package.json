@@ -1,6 +1,22 @@
 {
-  "repository": "#",
-  "license": "UNLICENSED",
+  "name": "electrode-ts",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronzim/electrode-ts.git"
+  },
+  "keywords": [
+    "dicom",
+    "ecg",
+    "eeg",
+    "typescript",
+    "waveform",
+    "medical",
+    "health",
+    "plotly"
+  ],
+  "author": "Mattia Ronzoni <mattia.ronzoni@dvisionlab.com> (https://www.dvisionlab.com)",
+  "license": "MIT",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
     "dev": "webpack serve --config ./bundler/webpack.dev.js"
