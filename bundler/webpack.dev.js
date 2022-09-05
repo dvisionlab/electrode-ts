@@ -1,3 +1,6 @@
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const { merge } = require("webpack-merge");
 const commonConfiguration = require("./webpack.common.js");
@@ -9,13 +12,7 @@ const infoColor = _message => {
 };
 
 module.exports = merge(commonConfiguration, {
-  entry: path.resolve(__dirname, "../src/app.ts"),
-  output: {
-    hashFunction: "xxhash64",
-    // filename: "bundle.[contenthash].js",
-    filename: "electrode.js",
-    path: path.resolve(__dirname, "../dist")
-  },
+  entry: path.resolve(__dirname, "../dev/app.ts"),
   devtool: "inline-source-map",
   stats: "errors-warnings",
   mode: "development",
@@ -24,7 +21,7 @@ module.exports = merge(commonConfiguration, {
       patterns: [{ from: path.resolve(__dirname, "../static") }]
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "../src/index.html"),
+      template: path.resolve(__dirname, "../dev/index.html"),
       minify: true
     }),
     new MiniCSSExtractPlugin()

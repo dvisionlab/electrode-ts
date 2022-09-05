@@ -1,7 +1,4 @@
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-const path = require("path");
 
 module.exports = {
   // entry: path.resolve(__dirname, "../src/app.ts"),
@@ -74,6 +71,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js", ".d.ts"]
   }
 };
